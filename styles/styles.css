@@ -1,3 +1,163 @@
-* body{
+:root {
+  --color-primario: #000000;
+  --color-secundario: #ffffff;
+  --fuente-titulos: "Bebas Neue", sans-serif;
+  --fuente-texto:"League Spartan", sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=League+Spartan:wght@100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0; 
+  font-size: 15px;
+  font-family: var(--fuente-texto);       
+}
+
+h1, h2,h3 {
+  font-family: var(--fuente-titulos);
+  color: var(--color-secundario);
+  font-size: 50px;
+}
+
+h2{
+  text-align: center;
+  font-size: 30px;
+  padding: 25px;
+}
+header {
+  height: 40px;
+  background-color: var(--color-primario);
+  padding: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  height:  50px;
+}
+
+header nav ul {
+  display: flex;
+  gap: 20px;
+list-style: none;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-family: var(--fuente-titulos);
+  font-size: 20px;
+}
+
+header nav ul li a:hover {
+  text-decoration: underline;
+}
+
+#banner {
+  background-color: var(--color-primario);
+  color: white;
+}
+
+.contendor_banner{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding:  60px;
+}
+
+.texto-banner, .banner_img {
+  width: 50%;
+  padding: 30px;
+}
+
+.texto-banner h1 {
+  font-size: 50px;
+  padding: 10px;
+  color: white;
+}
+
+.texto-banner p{
+  font-size: 20px;
+}
+
+.banner_img img {
+  border-radius: 20px;
+  max-width: 300px;
+}
+#servicios {
+  padding:30px;
+}
+.contenedor-servicios {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:center;
+  text-align: center;
+  justify-content: space-evenly;
+  padding: 30px;
+  gap: 20px;
+}
+
+.contenedor-servicios a {
+  text-decoration: none;
+}
+
+.servicio {
+  display: flex;
+  align-items: center;
+  border: 1px solid rgb(rgb(0, 0, 0), rgb(0, 0, 0), rgb(0, 0, 0));
+border-radius: 10px;
+width: 300px;
+overflow: hidden;
+transition: 0.3s transform;
+box-shadow: 2px ,1px,3px,0px rgb(0, 0, 0);
+}
+
+.servicio:hover {
+  transform: scale(1.0);
+
+}
+
+.servicio img {
+  width :35% ;
+  background-color: white;
+}
+
+hr {
+  width: 80%;
+  margin: 20px auto;
+  color: var(--color-primario);
+  opacity: 30%;    
+}
+
+#servicios {
+  padding: 30px;
+
+}
+
+.serivicios-contenedor {
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  padding: 30px;
+  gap: 30px;
+}
+
+.tarjetas {
+  width: 300px;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 5px;
+  padding: 20px;
+  transition: 0.3s transform;    
+  box-shadow: 1px 1px 3px 0px rgb(0, 0, 0);
+}
+
+.tarjetas img {
+  width: 100%;
+}
+#servicios h2{
   background-color: black;
 }
