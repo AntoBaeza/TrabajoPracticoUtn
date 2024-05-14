@@ -18,7 +18,7 @@
 h1, h2,h3 {
   font-family: var(--fuente-titulos);
   color: var(--color-secundario);
-  font-size: 50px;
+  font-size: 38px;
 }
 
 h2{
@@ -29,7 +29,6 @@ h2{
 header {
   height: 40px;
   background-color: var(--color-primario);
-  padding: 25px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -61,26 +60,23 @@ header nav ul li a:hover {
   color: white;
 }
 
-.contendor_banner{
+.contenedor_banner{
   display: flex;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  gap: 30px;
-  padding:  60px;
 }
 
-.texto-banner, .banner_img {
-  width: 50%;
+.banner_text, .banner_img {
   padding: 30px;
 }
 
-.texto-banner h1 {
+.banner_text h1 {
   font-size: 50px;
-  padding: 10px;
   color: white;
 }
 
-.texto-banner p{
+.banner_text p{
   font-size: 20px;
 }
 
@@ -123,7 +119,7 @@ box-shadow: 2px ,1px,3px,0px rgb(0, 0, 0);
 
 .servicio img {
   width :35% ;
-  background-color: white;
+  background-color: black;
 }
 
 hr {
@@ -138,7 +134,7 @@ hr {
 
 }
 
-.serivicios-contenedor {
+.servicios-contenedor {
   display:grid;
   grid-template-columns: repeat(3, 1fr);
   justify-content: center;
@@ -148,16 +144,188 @@ hr {
 
 .tarjetas {
   width: 300px;
-  border: 1px solid rgb(0, 0, 0);
+  border: 1px solid rgb(160, 157, 157);
   border-radius: 5px;
   padding: 20px;
   transition: 0.3s transform;    
-  box-shadow: 1px 1px 3px 0px rgb(0, 0, 0);
+  box-shadow: 2px 4px 6px rgba(0,0,0,.5);
+}
+.tarjetas h3,
+.tarjetas p,
+.tarjetas a {
+  margin: 10px;
+  text-align: center;
+  width: 80%;
 }
 
+.tarjetas:hover {
+  transform: scale(1.03);
+}
+.tarjetas p, h3 {
+  color: var(--color-primario);
+  font-weight: bolder;    
+}
+
+
+.tarjetas a {
+  background-color: var(--color-secundario);
+  text-decoration: none; 
+  padding: 7px;
+  border-radius: 5px;    
+  display: flex;  
+  align-items: center; 
+  justify-content: center;
+  box-shadow: 1px 1px 3px 0px rgba(70,73,76,0.39);
+}
+.tarjetas a:hover {
+  background-color: #555555;
+  
+}
+
+.tarjetas a ,
+.tarjetas a p {
+  color: black;    
+}
 .tarjetas img {
   width: 100%;
 }
 #servicios h2{
   background-color: black;
+}
+
+#contacto {
+  min-height: 80vh;
+}
+#formulario {
+  text-align: center;
+  margin-top: 50px;
+}
+
+#formulario h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  background-color: black;
+}
+
+.formulario {
+  width: 40%;
+  margin: auto;
+}
+
+.formulario form {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 20px;
+}
+
+.formulario form div {
+  display: flex;
+  flex-direction: column;
+}
+
+.formulario form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.formulario form input[type="text"],
+.formulario form input[type="email"],
+.formulario form textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.formulario form button[type="submit"] {
+  padding: 10px 20px;
+  border: 20px;
+  border-radius: 5px;
+  background-color: #ccc;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.formulario form button[type="submit"]:hover {
+  background-color: #999;
+}
+.skewed-container {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--color-primario);
+}
+
+.skewed {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 90%;
+  background: white;
+  z-index: 0;
+  transform: skewY(12deg);
+  transform-origin: top right;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+  color: white;
+  height: 50vh;
+}
+
+
+.social {
+  display: flex;
+  flex-direction: column;      
+}
+
+.social h3 {
+  color: white;
+  margin-bottom: 10px;
+}
+
+.social a {
+  display: flex;
+  gap: 7px;
+  text-decoration: none;    
+}
+
+.social a i {
+  color: white;
+  font-size: 25px;
+}
+.social a span {
+  color: white;
+}
+.social a span:hover {
+  text-decoration: underline;
+}
+
+.wsp i {
+  position:fixed;
+  width:60px;
+  height:60px;
+  line-height: 63px;
+  bottom:29vh;
+  right:25px;
+  background:#25d366;
+  color:#FFF;
+  border-radius:50px;
+  text-align:center;
+  font-size:35px;
+  box-shadow: 0px 1px 10px rgba(0,0,0,0.3);
+  z-index:100;
+  transition: all 300ms ease;           
+}
+.wsp i:hover{
+  background: #20ba5a;
+}
+footer {
+  background-color: var(--color-primario);
+  height: 20vh;
+  padding: 30px;   
 }
